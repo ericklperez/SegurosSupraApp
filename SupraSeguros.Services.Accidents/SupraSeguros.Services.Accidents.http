@@ -1,0 +1,6 @@
+@SupraSeguros.Services.Accidents_HostAddress = http://localhost:5117
+
+GET {{SupraSeguros.Services.Accidents_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

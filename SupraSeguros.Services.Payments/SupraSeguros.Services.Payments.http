@@ -1,0 +1,6 @@
+@SupraSeguros.Services.Payments_HostAddress = http://localhost:5272
+
+GET {{SupraSeguros.Services.Payments_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

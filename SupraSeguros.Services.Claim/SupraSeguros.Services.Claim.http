@@ -1,0 +1,6 @@
+@SupraSeguros.Services.Claim_HostAddress = http://localhost:5253
+
+GET {{SupraSeguros.Services.Claim_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
