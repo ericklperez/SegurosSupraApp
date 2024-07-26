@@ -31,6 +31,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{E790
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupraSeguros.Gateway", "SupraSeguros.Gateway\SupraSeguros.Gateway.csproj", "{2A35D7BB-BC59-40B2-BF11-40AB2B6C4BDF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{36904324-56C6-4C47-8871-062FA88845AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupraSeguros.Persistence.Repositories", "SupraSeguros.Persistence.Repositories\SupraSeguros.Persistence.Repositories.csproj", "{E7357CCD-AC9F-454E-BEF9-6554FA33EC51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{2A35D7BB-BC59-40B2-BF11-40AB2B6C4BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A35D7BB-BC59-40B2-BF11-40AB2B6C4BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A35D7BB-BC59-40B2-BF11-40AB2B6C4BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7357CCD-AC9F-454E-BEF9-6554FA33EC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7357CCD-AC9F-454E-BEF9-6554FA33EC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7357CCD-AC9F-454E-BEF9-6554FA33EC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7357CCD-AC9F-454E-BEF9-6554FA33EC51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +100,8 @@ Global
 		{2C376679-0993-48BA-875C-4EE45607F3A1} = {ECBC9FEB-60FD-412F-8DF1-F8497EE4EF3D}
 		{39273BA9-C1D7-4D56-8279-ABAF2DD4BAD3} = {ECBC9FEB-60FD-412F-8DF1-F8497EE4EF3D}
 		{2A35D7BB-BC59-40B2-BF11-40AB2B6C4BDF} = {E7906A2A-4456-4174-BF48-030523EF8234}
+		{36904324-56C6-4C47-8871-062FA88845AA} = {ECBC9FEB-60FD-412F-8DF1-F8497EE4EF3D}
+		{E7357CCD-AC9F-454E-BEF9-6554FA33EC51} = {36904324-56C6-4C47-8871-062FA88845AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {544BD3AF-3231-420C-858F-70C4AA307570}
