@@ -1,37 +1,50 @@
-﻿using SupraSeguros.Persistence.Repositories.Contracts;
+﻿using Microsoft.EntityFrameworkCore;
+using SupraSeguros.Persistence.Repositories.Contracts;
 
 namespace SupraSeguros.Persistence.Repositories
 {
     public class BaseRepository<T> : IRepositoryAsync<T> where T : class
     {
-        public Task<T> AddAsync(T entity)
+        private readonly DbContext _dbContext;
+
+        public BaseRepository(DbContext dbContext)
         {
-            throw new NotImplementedException();
+            this._dbContext = dbContext;
         }
 
-        public Task DeleteAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
-            throw new NotImplementedException();
+            await _dbContext.Set<T>().AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
+
+            return entity;
         }
 
-        public Task<T> GetByIdAsync(Guid id)
+        public async Task DeleteAsync(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<T>().Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size)
+        public async Task<T> GetByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<T>().FindAsync(id);
         }
 
-        public Task<IReadOnlyList<T>> ListAllAsync()
+        public async Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<T>().Skip((page - 1) * size).Take(size).AsNoTracking().ToListAsync();
         }
 
-        public Task UpdateAsync(T entity)
+        public async Task<IReadOnlyList<T>> ListAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<T>().ToListAsync();
+        }
+
+        public async Task UpdateAsync(T entity)
+        {
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
