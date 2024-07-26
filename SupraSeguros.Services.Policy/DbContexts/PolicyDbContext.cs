@@ -10,5 +10,6 @@ namespace SupraSeguros.Services.Policy.DbContexts
         public DbSet<Cobertura> Cobertura { get; set; }
         public DbSet<Poliza> Poliza { get; set; }
         public DbSet<PolizaCobertura> PolizaCobertura { get; set; }
+
     }
 }

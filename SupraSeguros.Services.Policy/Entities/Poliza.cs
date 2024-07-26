@@ -1,4 +1,6 @@
-﻿namespace SupraSeguros.Services.Policy.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SupraSeguros.Services.Policy.Entities
 {
     public class Poliza
     {
@@ -9,7 +11,9 @@
         public DateTime? FechaInicio { get; set; }
         public DateTime? FechaFin { get; set; }
         public string Estado { get; set; }
+        [Column(TypeName = "decimal(6,2)")]
         public decimal? Prima { get; set; }
+        [Column(TypeName = "decimal(6,2)")]
         public decimal? Deducible { get; set; }
     }
 }

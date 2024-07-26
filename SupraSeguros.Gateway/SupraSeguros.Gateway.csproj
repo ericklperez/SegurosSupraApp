@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SupraSeguros.Integration.Messages\SupraSeguros.Integration.Messages.csproj" />
+    <ProjectReference Include="..\SupraSeguros.Integration.MessagingBus\SupraSeguros.Integration.MessagingBus.csproj" />
+  </ItemGroup>
+
 </Project>
