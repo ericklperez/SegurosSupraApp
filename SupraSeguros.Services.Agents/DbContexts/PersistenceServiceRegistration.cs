@@ -1,8 +1,7 @@
 ﻿using SupraSeguros.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
-using SupraSeguros.Services.Agents.DbContexts;
 
-namespace SupraSeguros.Services.Policy.DbContexts
+namespace SupraSeguros.Services.Agents.DbContexts
 {
     public static class PersistenceServiceRegistration
     {
