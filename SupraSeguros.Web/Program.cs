@@ -1,7 +1,17 @@
+using SupraSeguros.Web.Services;
+using SupraSeguros.Web.Models.Api;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient<IServiceAsync<Customer>, CustomerService>(cliente =>
+{
+    cliente.BaseAddress = new Uri("https://localhost:50110/customer/api/");
+});
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 

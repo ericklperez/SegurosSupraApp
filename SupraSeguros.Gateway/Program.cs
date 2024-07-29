@@ -1,3 +1,4 @@
+using Microsoft.OpenApi.Models;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -7,7 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+
+
 builder.Services.AddOcelot();
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gateway Apis", Version = "v1" });
+});
 
 var app = builder.Build();
 
@@ -16,6 +24,14 @@ var app = builder.Build();
 await app.UseOcelot();
 
 app.UseHttpsRedirection();
+
+app.UseSwagger();
+
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gateway");
+
+});
 
 app.UseAuthorization();
 

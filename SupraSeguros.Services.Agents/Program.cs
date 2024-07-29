@@ -1,4 +1,4 @@
-using SupraSeguros.Services.Policy.DbContexts;
+using SupraSeguros.Services.Agents.DbContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 

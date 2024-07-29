@@ -18,9 +18,4 @@
 	<ItemGroup>
 		<ProjectReference Include="..\SupraSeguros.Persistence.Repositories\SupraSeguros.Persistence.Repositories.csproj" />
 	</ItemGroup>
-
-
-	<ItemGroup>
-	  <Folder Include="Repositories\" />
-	</ItemGroup>
 </Project>
