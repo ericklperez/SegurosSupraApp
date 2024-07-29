@@ -1,5 +1,5 @@
 Sistema de Gestión de Seguros Supra
-Este repositorio contiene el código fuente para un sistema de gestión de seguros basado en microservicios. La arquitectura del sistema está diseñada para gestionar diversos aspectos del proceso de seguros, desde la gestión de clientes hasta el procesamiento de reclamaciones y pagos, a través de una serie de microservicios y componentes de infraestructura.
+Este repositorio contiene el código fuente para un sistema de gestión de seguros basado en microservicios. La arquitectura del sistema está diseñada para gestionar diversos aspectos del proceso de seguros, desde la gestión de clientes hasta el procesamiento de reclamaciones y pagos, a través de una serie de microservicios, accedidos mediante un Gateway. No obstante, aunque se avanzó en el desarrollo de casi toda su estructura, este repositorio solo contiene un ejemplo funcional de Customer para que sirva de ejemplo.
 
 Contenido del Repositorio
 1. Controladores
