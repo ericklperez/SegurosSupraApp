@@ -16,5 +16,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\SupraSeguros.Persistence.Repositories\SupraSeguros.Persistence.Repositories.csproj" />
+		<ProjectReference Include="..\SupraSeguros.Services.Customer\SupraSeguros.Services.Customer.csproj" />
 	</ItemGroup>
 </Project>
